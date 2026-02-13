@@ -90,7 +90,7 @@ Your journey will take you through the wildness of the American Midwest and acro
    Explain this code with your best vocabulary.
    > The for loop compares the number of forests in `forestNumber` with the number of forests in `areas`. If the number of forests in `forestNumber` is less than that in `areas` then the loop will push the "forest" string into the journey array. It will continue to loop until the number of forests in `forestNumber` is equal to that in `areas`. 
 5. Explain the value of the `database` variable in the **database** module. Be as comprehensive as possible.
-   > Your answer here
+   > The variable `database` has two properties: `cattleTypes` and `drivers`. The `cattleTypes` property is an array of objects, where each object represents a type of cattle with an `id` and a `breed`. The `drivers` property is an array of objects, where each object represents a driver with an `id`, `first_name`, `last_name`, and `gender`.
 6. In the **drovers** module, there is a `hireDrovers()` function. You will notice the following code on that line - `(herdSize)`. What is that defining, and where does it get its value?
    > Your answer here
 
