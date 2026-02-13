@@ -1,4 +1,4 @@
-const database = {
+ const database = {
     cattleTypes: [
         {
             id: 1,
@@ -17,7 +17,7 @@ const database = {
             breed: "Ankole-Watusi"
         }
     ],
-    drovers: [{
+    drivers: [{
         "id": 1,
         "first_name": "Wanda",
         "last_name": "Ascraft",

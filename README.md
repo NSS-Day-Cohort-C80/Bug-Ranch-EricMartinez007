@@ -14,7 +14,7 @@ Slim Jenkins offers a vacation package for people who have always wanted to join
 
 He calls it the **Kansas Slim's Cattle Adventure**.
 
-People join a team of experienced drovers who will train them in the basics of herding cattle and driving them across hundreds of miles to their destination at Old Red's Ranch.
+People join a team of experienced drivers who will train them in the basics of herding cattle and driving them across hundreds of miles to their destination at Old Red's Ranch.
 
 Unfortunately, someone gained access to the code that produces an outline of the adventure to the paying customers, so Slim has hired you to examine and fix the code.
 
@@ -47,7 +47,7 @@ If you are able to fix all of the bugs, you will output similar to what is below
                                ||   (__)
                                ||w--||     \|/
 
-You will be accompanying 5 drovers as they drive 50 cattle to Old Red's Ranch for grazing
+You will be accompanying 5 drivers as they drive 50 cattle to Old Red's Ranch for grazing
 
 The herd is made of up the following types of cattle:
 Ankole-Watusi,Brown Swiss,Brown Swiss,American Angus,Brown Swiss,
@@ -60,7 +60,7 @@ American Angus,Brown Swiss,American Angus,Brown Swiss,American Angus,
 American Angus,Ankina,Brown Swiss,American Angus,Ankina,Brown Swiss,
 American Angus,Ankole-Watusi,Ankina,American Angus,Brown Swiss
 
-Here is the team of drovers you will be joining
+Here is the team of drivers you will be joining
         * Melvyn Hethron
         * Yancy Gresley
         * Willabella Attarge
@@ -75,12 +75,12 @@ Your journey will take you through the wildness of the American Midwest and acro
         * mountain
 ```
 
-1. In the **main** module, one of the first lines of code is `const drovers = hireDrovers(cattleToDrive)`. Explain what the value of the `drovers` variable is when that line of code runs.
-   > `drovers` is the variable where we store the return value we get from the hireDrovers() function.
-2. At the bottom of the main module, you will see the following code - `for (const drover of drovers)`. Explain what the values of both the `drover` and the `drovers` variables are.
-   > `drover` is a variable that gets assigned a value as the code goes through the array. `drovers` is the array itself where we have a collection of related data.
+1. In the **main** module, one of the first lines of code is `const drivers = hireDrivers(cattleToDrive)`. Explain what the value of the `drivers` variable is when that line of code runs.
+   > `drivers` is the variable where we store the return value we get from the hireDrivers() function. `drivers` here represents the array of randomly pick drivers from the main database array using the hireDrivers() function. In the hireDrivers() function we determined that we only need 5 drivers (`numberNeeded`) for 50 cattle and used `numberNeeded` to stop the for loop once the counter reached 5.
+2. At the bottom of the main module, you will see the following code - `for (const driver of drivers)`. Explain what the values of both the `driver` and the `drivers` variables are.
+   >  `driver` is a variable that gets assigned a value as the code goes through the array (`drivers`). `drivers` is the array we made earlier in the code where we have a collection of 5 randomly selected drivers and their various properties. As the for loop runs, `driver` gets declared and assigned a value that is in the `drivers` array. Once for loop has assigned a value for all the objects in the `drivers` array the loop will finish.
 3. In the **journey** module, there is a `journeyMaker()` function. In that function, there is a variable named `areas` which will have the value of an object. Use your debugger to show what the value of each key is on that object. Use [Loom](https://www.loom.com) to record your session.
-   > Your public Loom URL here
+   > [Your public Loom URL here](https://www.loom.com/share/ad4d424e2cb54897b23129cded622054)
 4. Also in the **journey** module, there is the following code:
    ```js
    for (let forestNumber = 0; forestNumber < areas.forests; forestNumber++) {
@@ -88,11 +88,11 @@ Your journey will take you through the wildness of the American Midwest and acro
    }
    ```
    Explain this code with your best vocabulary.
-   > Your answer here
+   > The for loop compares the number of forests in `forestNumber` with the number of forests in `areas`. If the number of forests in `forestNumber` is less than that in `areas` then the loop will push the "forest" string into the journey array. It will continue to loop until the number of forests in `forestNumber` is equal to that in `areas`. 
 5. Explain the value of the `database` variable in the **database** module. Be as comprehensive as possible.
-   > Your answer here
-6. In the **drovers** module, there is a `hireDrovers()` function. You will notice the following code on that line - `(herdSize)`. What is that defining, and where does it get its value?
-   > Your answer here
+   > The variable `database` has two properties: `cattleTypes` and `drivers`. The `cattleTypes` property is an array of objects, where each object represents a type of cattle with an `id` and a `breed`. The `drivers` property is an array of objects, where each object represents a driver with an `id`, `first_name`, `last_name`, and `gender`.
+6. In the **drivers** module, there is a `hireDrivers()` function. You will notice the following code on that line - `(herdSize)`. What is that defining, and where does it get its value?
+   > `(herdSize)` is equal to 50, however, it is and unused parameter of the `hireDrivers()` function. It gets this value from the **main** module where the function is invoked.  
 
 ## When You Are Done
 
